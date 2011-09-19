@@ -1,4 +1,4 @@
-To use this extension you have to copy the contents of folder /assets/lyiightbox2images into /images/lyiightbox2images/ folder.
+To use this extension you have to copy the contents of folder "lyiightbox2images" from this extension to /images/lyiightbox2images/ folder of your yii web application.
 
 To use this widget with one image:
 
