@@ -1,0 +1,45 @@
+To user this extension you have to copy the contents of folder /assets/images into /images/lyiightbox2/ folder.
+
+To use this widget with one image:
+
+<?php
+            $this->widget('ext.lyiightbox2.LyiightBox2', array(
+                'smallest' => '/path/to/thuimb/images.jpg',
+                'biggest' => '/path/to/biggest/image.jpg',
+                'title' => 'Sample Image 1.'
+            ));
+?>
+
+If you want, you can also hide some image with "visible" option:
+
+<?php
+            $this->widget('ext.lyiightbox2.LyiightBox2', array(
+                'smallest' => '/path/to/thuimb/images.jpg',
+                'biggest' => '/path/to/biggest/image.jpg',
+                'title' => 'Sample Image 1.'
+            ));
+            $this->widget('ext.lyiightbox2.LyiightBox2', array(
+                'smallest' => '/path/to/thuimb/images.jpg',
+                'biggest' => '/path/to/biggest/image.jpg',
+                'title' => 'Sample Image 1.',
+                'visible' => false
+            ));
+?>
+
+If you put more images in the same group, you can just show the first one and hide the others. The others must have the same group bane. By default, all images stay in "_" group. If you want, you can specify it:
+
+<?php
+            $this->widget('ext.lyiightbox2.LyiightBox2', array(
+                'smallest' => '/path/to/thuimb/images.jpg',
+                'biggest' => '/path/to/biggest/image.jpg',
+                'title' => 'Sample Image 1.',
+                'group' => 'sample'
+            ));
+            $this->widget('ext.lyiightbox2.LyiightBox2', array(
+                'smallest' => '/path/to/thuimb/images.jpg',
+                'biggest' => '/path/to/biggest/image.jpg',
+                'title' => 'Sample Image 1.',
+                'visible' => false,
+                'group' => 'sample'
+            ));
+?>
