@@ -1,7 +1,6 @@
-To use this extension you have to copy the contents of folder "lyiightbox2images" from this extension to /images/lyiightbox2images/ folder of your yii web application.
+For install lyiightbox you have only to copy his files in /protected/extensions/lyiightbox folder.
 
 To use this widget with one image:
-
 <?php
             $this->widget('ext.lyiightbox.LyiightBox2', array(
                 'smallest' => '/path/to/thuimb/images.jpg',
@@ -10,8 +9,7 @@ To use this widget with one image:
             ));
 ?>
 
-If you want, you can also hide some image with "visible" option:
-
+If you want, you can also hide some image with "visible" option. By default visible is set to true.
 <?php
             $this->widget('ext.lyiightbox.LyiightBox2', array(
                 'smallest' => '/path/to/thuimb/images.jpg',
@@ -26,8 +24,7 @@ If you want, you can also hide some image with "visible" option:
             ));
 ?>
 
-If you put more images in the same group, you can just show the first one and hide the others. The others must have the same group bane. By default, all images stay in "_" group. If you want, you can specify it:
-
+If you put more images in the same group, you can just show the first one and hide the others. The others must have the same group name. By default, all images stay in "_" group. If you want, you can specify it:
 <?php
             $this->widget('ext.lyiightbox.LyiightBox2', array(
                 'smallest' => '/path/to/thuimb/images.jpg',
