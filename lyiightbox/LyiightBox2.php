@@ -43,8 +43,11 @@ class LyiightBox2 extends CWidget {
 
     private function loadAllJsScript() {
         $this->populateJsarrayScripts();
+
+        Yii::app()->getClientScript()->registerScript('_', 'assetUrl = "' . (Yii::app()->getAssetManager()->publish($this->assetsFolder)) . '";', CClientScript::POS_HEAD);
+
         foreach ($this->scripts as $filename)
-            Yii::app()->getClientScript()->registerScriptFile($this->baseUrl . $filename);
+            Yii::app()->getClientScript()->registerScriptFile($this->baseUrl . $filename, CClientScript::POS_END);
     }
 
     private function loadAllCssScripts() {
@@ -58,11 +61,11 @@ class LyiightBox2 extends CWidget {
         $this->baseUrl = CHtml::asset($this->assetsFolder);
     }
 
-    private function printImage () {
+    private function printImage() {
         return $this->visible ? '<img src="' . $this->smallest . '" border="0" />' : '';
     }
 
-    private function printLink () {
+    private function printLink() {
         echo '<a href="' . $this->biggest . '" rel="lightbox[_' . $this->group . ']" title="' . $this->title . '">' . $this->printImage() . '</a>';
     }
 
@@ -72,7 +75,6 @@ class LyiightBox2 extends CWidget {
         $this->loadAllJsScript();
         $this->loadAllCssScripts();
         $this->printLink();
-
     }
 
 }
