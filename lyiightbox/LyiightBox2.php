@@ -5,13 +5,12 @@
  *
  * @author Simone Gentili <sensorario@gmail.com>
  * @version 1.0
- * @license MIT
  */
 
 /**
  * This widget encapsulates the LightBox2 script for popup images.
  *
- * ({@link https://github.com/sensorario/LyiightBox2}).
+ * ({@link https://github.com/sensorario/lyiightbox}).
  *
  * @author Simone Gentili <sensorario@gmail.com>
  */
