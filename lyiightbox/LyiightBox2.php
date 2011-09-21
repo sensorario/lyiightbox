@@ -21,8 +21,8 @@ class LyiightBox2 extends CWidget {
     private $assetsFolder = null;
     private $assetsFolderName = 'assets';
     private $baseUrl = null;
-    public $smallest = '';
-    public $biggest = '';
+    public $thumbnail = '';
+    public $image = '';
     public $title = 'image';
     public $group = 'default';
     public $visible = true;
@@ -62,11 +62,11 @@ class LyiightBox2 extends CWidget {
     }
 
     private function printImage() {
-        return $this->visible ? '<img src="' . $this->smallest . '" border="0" />' : '';
+        return $this->visible ? '<img src="' . $this->thumbnail . '" border="0" />' : '';
     }
 
     private function printLink() {
-        echo '<a href="' . $this->biggest . '" rel="lightbox[_' . $this->group . ']" title="' . $this->title . '">' . $this->printImage() . '</a>';
+        echo '<a href="' . $this->image . '" rel="lightbox[_' . $this->group . ']" title="' . $this->title . '">' . $this->printImage() . '</a>';
     }
 
     public function init() {

@@ -3,8 +3,8 @@ For install lyiightbox you have only to copy his files in /protected/extensions/
 To use this widget with one image:
 <?php
             $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'smallest' => '/path/to/thumb/images.jpg',
-                'biggest' => '/path/to/biggest/image.jpg',
+                'thumbnail' => '/path/to/thumb/images.jpg',
+                'image' => '/path/to/image/image.jpg',
                 'title' => 'Sample Image 1.'
             ));
 ?>
@@ -12,13 +12,13 @@ To use this widget with one image:
 If you want, you can also hide some image with "visible" option. By default visible is set to true.
 <?php
             $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'smallest' => '/path/to/thumb/images.jpg',
-                'biggest' => '/path/to/biggest/image.jpg',
+                'thumbnail' => '/path/to/thumb/images.jpg',
+                'image' => '/path/to/image/image.jpg',
                 'title' => 'Sample Image 1.'
             ));
             $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'smallest' => '/path/to/thumb/images.jpg',
-                'biggest' => '/path/to/biggest/image.jpg',
+                'thumbnail' => '/path/to/thumb/images.jpg',
+                'image' => '/path/to/image/image.jpg',
                 'title' => 'Sample Image 1.',
                 'visible' => false
             ));
@@ -27,14 +27,14 @@ If you want, you can also hide some image with "visible" option. By default visi
 If you put more images in the same group, you can just show the first one and hide the others. The others must have the same group name. By default, all images stay in "_" group. If you want, you can specify it:
 <?php
             $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'smallest' => '/path/to/thumb/images.jpg',
-                'biggest' => '/path/to/biggest/image.jpg',
+                'thumbnail' => '/path/to/thumb/images.jpg',
+                'image' => '/path/to/image/image.jpg',
                 'title' => 'Sample Image 1.',
                 'group' => 'sample'
             ));
             $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'smallest' => '/path/to/thumb/images.jpg',
-                'biggest' => '/path/to/biggest/image.jpg',
+                'thumbnail' => '/path/to/thumb/images.jpg',
+                'image' => '/path/to/image/image.jpg',
                 'title' => 'Sample Image 1.',
                 'visible' => false,
                 'group' => 'sample'
