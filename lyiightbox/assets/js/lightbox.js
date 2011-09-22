@@ -46,8 +46,8 @@
 //  Configurationl
 //
 LightboxOptions = Object.extend({
-    fileLoadingImage:        assetUrl + '/lyiightbox2images/loading.gif',
-    fileBottomNavCloseImage: assetUrl + '/lyiightbox2images/closelabel.gif',
+    fileLoadingImage:        lyiightboxAssetUrl + '/lyiightbox2images/loading.gif',
+    fileBottomNavCloseImage: lyiightboxAssetUrl + '/lyiightbox2images/closelabel.gif',
 
     overlayOpacity: 0.8,   // controls transparency of shadow overlay
 
