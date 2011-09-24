@@ -15,6 +15,13 @@ To use this widget you can call it setting some parametes. If you want, you can 
 
 ##lyiightbox.Galleryii
 Since version 1.1 where added a new feature: gallery. By default, you have to put your images in /images/galleryii/ folder. Thumbnail will be placed in /images/galleryii/thumbnails folder. Big images where be placed in /images/galleryii/images folder. Thumb, and image, must have the same filename.
-<?php $this->widget('ext.lyiightbox.Galleryii'); ?>
+<?php
+	$this->widget('ext.lyiightbox.Galleryii');
+?>
+
 If you want, you can configure this new feature. Maybe you need to place your gallery in a different place!
-<?php $this->widget('ext.lyiightbox.Galleryii', array('rootFolder' => '/place/of/gallery')); ?>
+<?php
+	$this->widget('ext.lyiightbox.Galleryii', array(
+		'rootFolder' => '/place/of/gallery'
+	));
+?>
