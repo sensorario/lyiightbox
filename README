@@ -22,6 +22,9 @@ Since version 1.1 where added a new feature: gallery. By default, you have to pu
 If you want, you can configure this new feature. Maybe you need to place your gallery in a different place!
 <?php
 	$this->widget('ext.lyiightbox.Galleryii', array(
-		'rootFolder' => '/place/of/gallery'
+		'rootFolder' => '/place/of/gallery', // by default '';
+		'baseFolder' => '/images/galleryii', // by default '/images/galleryii';
+		'thumbnails' => '/thumbnails',	     // by default '/thumbnails';
+		'images' => '/images'		     // by default '/images';
 	));
 ?>
