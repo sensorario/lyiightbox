@@ -1,42 +1,20 @@
+##Install
 For install lyiightbox you have only to copy his files in /protected/extensions/lyiightbox folder.
 
-To use this widget with one image:
+##lyiightbox.LightBox2
+To use this widget you can call it setting some parametes. If you want, you can also hide some images with "visible" option. By default visible is set on true. And if you want, you can group images with 'group' value. By default this value is 'default'
 <?php
             $this->widget('ext.lyiightbox.LyiightBox2', array(
                 'thumbnail' => '/path/to/thumb/images.jpg',
                 'image' => '/path/to/image/image.jpg',
-                'title' => 'Sample Image 1.'
+                'title' => 'Sample Image 1.',
+		'visible' => true,
+		'group' => 'myOwnGallery'
             ));
 ?>
 
-If you want, you can also hide some image with "visible" option. By default visible is set to true.
-<?php
-            $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'thumbnail' => '/path/to/thumb/images.jpg',
-                'image' => '/path/to/image/image.jpg',
-                'title' => 'Sample Image 1.'
-            ));
-            $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'thumbnail' => '/path/to/thumb/images.jpg',
-                'image' => '/path/to/image/image.jpg',
-                'title' => 'Sample Image 1.',
-                'visible' => false
-            ));
-?>
-
-If you put more images in the same group, you can just show the first one and hide the others. The others must have the same group name. By default, all images stay in "_" group. If you want, you can specify it:
-<?php
-            $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'thumbnail' => '/path/to/thumb/images.jpg',
-                'image' => '/path/to/image/image.jpg',
-                'title' => 'Sample Image 1.',
-                'group' => 'sample'
-            ));
-            $this->widget('ext.lyiightbox.LyiightBox2', array(
-                'thumbnail' => '/path/to/thumb/images.jpg',
-                'image' => '/path/to/image/image.jpg',
-                'title' => 'Sample Image 1.',
-                'visible' => false,
-                'group' => 'sample'
-            ));
-?>
+##lyiightbox.Galleryii
+Since version 1.1 where added a new feature: gallery. By default, you have to put your images in /images/galleryii/ folder. Thumbnail will be placed in /images/galleryii/thumbnails folder. Big images where be placed in /images/galleryii/images folder. Thumb, and image, must have the same filename.
+<?php $this->widget('ext.lyiightbox.Galleryii'); ?>
+If you want, you can configure this new feature. Maybe you need to place your gallery in a different place!
+<?php $this->widget('ext.lyiightbox.Galleryii', array('rootFolder' => '/place/of/gallery')); ?>
