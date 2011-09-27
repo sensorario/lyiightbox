@@ -23,6 +23,7 @@ class Galleryii extends ConfigWidget {
     public $baseFolder = '/images/galleryii';
     public $thumbnails = '/thumbnails';
     public $images = '/images';
+    public $thumbSide = 120;
 
     private function showHelpPage() {
         echo ""
@@ -49,8 +50,7 @@ class Galleryii extends ConfigWidget {
         $countImages = 0;
         while ($image = readdir($dirHandle))
             if (!in_array($image, array('.', '..')))
-                LyiightBox2::thumb($this, $image);
-        echo $countImages;
+                LyiightBox2::thumb($this, $image, $this->thumbSide);
         closedir($dirHandle);
     }
 

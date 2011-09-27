@@ -50,13 +50,17 @@ class LyiightBox2 extends ConfigWidget {
         $this->printLink();
     }
 
-    public static function thumb(Galleryii $galleryii, $image) {
+    public static function thumb(Galleryii $galleryii, $image, $width = 120) {
+        echo "<div style=\"width: ".($width+3)."px; height: ".($width+30+3)."px; margin: 3px; border: #ccc 1px solid; float: left; \">";
+        echo "<div style=\"width: $width; height: $width; margin: 3px; border: #ccc 1px solid;\">";
         echo '<a '
         . 'href="' . "{$galleryii->rootFolder}{$galleryii->baseFolder}{$galleryii->images}/{$image}" . '" '
         . 'rel="lightbox[galleryii]" '
         . '>'
-        . '<img src="'."{$galleryii->rootFolder}{$galleryii->baseFolder}{$galleryii->thumbnails}/{$image}".'">'
+        . '<img src="'."{$galleryii->rootFolder}{$galleryii->baseFolder}{$galleryii->thumbnails}/{$image}".'" style="width: 100%;">'
         . '</a>';
+        echo "</div>";
+        echo "</div>";
     }
 
 }
