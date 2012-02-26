@@ -1,7 +1,8 @@
 <?php
 
 return array(
-	'extract' => array(
-		'to' => 'protected/extensions/'
-	),
+    'version' => '1.0',
+    'extract' => array(
+        'to' => 'protected/extensions/'
+    ),
 );
