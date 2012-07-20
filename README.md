@@ -3,16 +3,15 @@ Install
 
 To install **lyiightbox** you could copy his files in folder
 
-::
-
     /protected/extensions/lyiightbox
 
 lyiightbox.LightBox2
 --------------------
 
-To use this widget you can call it setting some parametes. If you want, you can also hide some images with "visible" option. By default visible is set on true. And if you want, you can group images with 'group' value. By default this value is 'default'
-
-::
+To use this widget you can call it setting some parametes. If you want, you can 
+also hide some images with "visible" option. By default visible is set on true. 
+And if you want, you can group images with 'group' value. By default this value 
+is 'default'
 
     <?php
             $this->widget('ext.lyiightbox.LyiightBox2', array(
@@ -32,16 +31,12 @@ put your images in /images/galleryii/ folder. Thumbnail will be placed in
 /images/galleryii/thumbnails folder. Big images where be placed in 
 /images/galleryii/images folder. Thumb, and image, must have the same filename.
 
-::
-
     <?php
 	$this->widget('ext.lyiightbox.Galleryii');
     ?>
 
 If you want, you can configure this new feature. Maybe you need to place your 
 gallery in a different place!
-
-::
 
     <?php
 	$this->widget('ext.lyiightbox.Galleryii', array(
