@@ -38,8 +38,6 @@ class ConfigWidget extends CWidget
     private function populateJsarrayScripts()
     {
         $this->scripts = array(
-            '/js/prototype.js',
-            '/js/scriptaculous.js?load=effects,builder',
             '/js/lightbox.js',
         );
     }
@@ -47,8 +45,6 @@ class ConfigWidget extends CWidget
     private function loadAllJsScript()
     {
         $this->populateJsarrayScripts();
-
-        Yii::app()->getClientScript()->registerScript('_', 'lyiightboxAssetUrl = "' . (Yii::app()->getAssetManager()->publish($this->assetsFolder)) . '";', CClientScript::POS_HEAD);
 
         foreach ($this->scripts as $filename) {
             Yii::app()->getClientScript()->registerScriptFile($this->baseUrl . $filename, CClientScript::POS_END);

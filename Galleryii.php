@@ -2,7 +2,6 @@
 
 /* @todo use __DIR__ if php5.3 */
 include_once dirname(__FILE__) . '/ConfigWidget.php';
-include_once dirname(__FILE__) . '/LyiightBox2.php';
 
 /**
  * Galleryii class file.

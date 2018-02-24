@@ -24,6 +24,7 @@ class LyiightBox2 extends ConfigWidget {
     public $title = 'image';
     public $group = 'default';
     public $visible = true;
+    public $id = null;
 
     public function __construct() {
         parent::__construct();
@@ -37,9 +38,10 @@ class LyiightBox2 extends ConfigWidget {
 
     private function printLink() {
         echo '<a '
+        . ($this->id ? 'id="' . $this->id . '"' : '')
         . 'href="' . $this->image . '" '
-        . 'rel="lightbox[_' . $this->group . ']" '
-        . 'title="' . $this->title . '"'
+        . 'data-lightbox="' . $this->group . '" '
+        . 'data-title="' . $this->title . '"'
         . '>'
         . $this->printImage()
         . '</a>';
